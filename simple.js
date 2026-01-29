@@ -1,26 +1,9 @@
+function greet() {
+  const name = document.getElementById("nameInput").value;
 
-// #1
-// const car = {
-//   brand: "Tesla",
-//   model: "Model S",
-//   year: 2024,
-//   price: "₹80,00,000"
-// };
-// const {brand:THISBRAND,model:THISMODEL}=car;
-// console.log(THISBRAND);
-// console.log(THISMODEL);
-
-
-// #2
-const employee = {
-  name: "Ashi",
-  role: "Developer",
-  skills: {
-    frontend: "React",
-    backend: "NodeJS",
+  if (name.trim() === "") {
+    document.getElementById("output").innerText = "Bro… at least type your name 😑";
+  } else {
+    document.getElementById("output").innerText = "Hello " + name + "! Welcome to GitHub world 🚀";
   }
-};
-const {skills:{frontend:FRONTENDSKILL,backend:BACKENDSKILL}}=employee;
-console.log(FRONTENDSKILL);
-console.log(BACKENDSKILL);
-
+}
